@@ -13,15 +13,17 @@
 
 ## 生成命令（build.py pgen 已封装，以下为手动用法）
 
+**本 skill 只用参考生成模式（generate_type 0）**：换主角/换产品是唯一目标。
+平台另有首尾帧模式（generate_type 1），本 skill 永不使用（用户明确去除）。
+
 ```bash
 pippit-tool-cli generate-video \
   --prompt "<分镜动作描述>" \
   --model Seedance_2.5 \
-  --generate-type 0 \        # 0=参考生成(换内容)；1=首尾帧(高保真)
-  --image refs/character.jpg \   # 参考图可重复传多张；本地路径自动上传
-  --image refs/product.jpg \
-  --duration 4 \             # 整数秒，模型下限 4，上限 30（2.5）
-  --resolution 720p \        # 480p/720p/1080p
+  --image refs/character.jpg \   # 主角参考图，每镜必传（跨镜身份锚）
+  --image refs/product.jpg \     # 涉产品的镜头追加产品参考图
+  --duration 4 \                 # 整数秒，模型下限 4，上限 30（2.5）
+  --resolution 720p \            # 480p/720p/1080p
   --ratio 9:16
 ```
 

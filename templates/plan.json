@@ -1,62 +1,91 @@
 {
   "meta": {
-    "title": "示例：居家素颜开箱测评（15s 竖屏）",
+    "title": "模板：同结构换内容分镜表（示例为口红开箱，15s 竖屏）",
     "width": 720,
     "height": 1280,
     "aspect_ratio": "9:16",
-    "resolution": "480p",
-    "model": "bytedance/seedance-2.0/fast/image-to-video",
-    "native_dialogue": true,
-    "options": {}
+    "resolution": "720p",
+    "model": "Seedance_2.5",
+    "platform": "pippit",
+    "generate_type": 0,
+    "native_dialogue": false,
+    "min_duration": 4,
+    "options": {},
+    "points_per_second": 20
   },
-  "character": {
-    "note": "可选：角色定妆图。image 为空且 image_prompt 有值时，可先用图像模型出图再把 URL 填进各镜头 image_url",
-    "image": "",
-    "image_prompt": "20多岁女性，深棕及肩发用鲨鱼夹挽起，浅灰翻领睡衣，素颜，深夜卧室书桌，暖色台灯夜景，手机直拍质感"
+  "references": {
+    "character": "refs/character.jpg",
+    "product": "refs/product.jpg",
+    "note": "参考生成模式（generate_type 0）：每镜传主角参考图锁定身份；涉及产品的镜头追加产品图"
   },
+  "structure_source": "GLM 直传视频理解 refs/glm-storyboard.json（6段语义节奏合并为5镜，与原片机位切点一致）",
   "shots": [
     {
       "id": "A",
       "duration": 2,
       "file": "shots/A.mp4",
-      "prompt": "竖屏手机直拍质感，深夜卧室书桌前，穿浅灰睡衣的年轻女性双手撕开小快递盒胶带、掀盖低头看盒内，暖黄台灯与顶灯照明，背景床铺虚化，手持轻微晃动，自然实时动作",
+      "prompt": "竖屏手机直拍质感：一位20岁中国年轻女性，深色长发披肩，穿奶白色针织家居服，深夜在卧室书桌前双手撕开小快递盒的胶带、掀开盒盖低头看盒内，暖黄台灯与顶灯照明，背景床铺虚化，手持轻微晃动，自然实时动作，只有撕胶带声和安静环境音",
+      "refs": [
+        "refs/character.jpg"
+      ],
       "dialogue": "",
-      "image_url": ""
+      "gen_duration": 4
     },
     {
       "id": "B",
-      "duration": 3,
+      "duration": 2.7,
       "file": "shots/B.mp4",
-      "prompt": "特写：从纸盒中取出白色圆肩泵瓶精华，手指转动瓶身展示白色英文标签，背景虚化桌面，暖色夜景，浅景深",
+      "prompt": "大特写浅景深：她的手指从打开的小纸盒中取出一支哑光白色管身口红，旋转出豆沙红色膏体，缓缓转动向镜头展示，背景虚化的桌面与台灯，暖色夜景，只有轻微塑料旋转声，安静",
+      "refs": [
+        "refs/character.jpg",
+        "refs/product.jpg"
+      ],
       "dialogue": "",
-      "image_url": ""
+      "gen_duration": 4
     },
     {
       "id": "C",
-      "duration": 1,
+      "duration": 0.8,
       "file": "shots/C.mp4",
-      "prompt": "侧面近景：女性低头看手，拇指按下泵头把产品取到另一只手心，动作干脆利落，暖色夜景",
+      "prompt": "近景俯视：女性低头看着手，拔开口红盖子露出豆沙红膏体，准备涂抹，动作干脆利落，暖色夜景，安静环境音",
+      "refs": [
+        "refs/character.jpg",
+        "refs/product.jpg"
+      ],
       "dialogue": "",
-      "image_url": ""
+      "gen_duration": 4
     },
     {
       "id": "D",
-      "duration": 5,
+      "duration": 4.8,
       "file": "shots/D.mp4",
-      "prompt": "大特写侧脸：指腹把精华在脸颊上轻拍涂匀，皮肤光泽与质地清晰，动作缓慢轻柔，近ASMR氛围，暖色夜景",
+      "prompt": "唇部大特写：女性微张双唇，将豆沙红色口红涂抹上唇，由唇中央向两侧嘴角晕染均匀，唇色渐显水润饱满，动作缓慢轻柔，近ASMR氛围，安静环境音，暖色夜景",
+      "refs": [
+        "refs/character.jpg",
+        "refs/product.jpg"
+      ],
       "dialogue": "",
-      "image_url": ""
+      "gen_duration": 5
     },
     {
       "id": "E",
-      "duration": 4,
+      "duration": 4.7,
       "file": "shots/E.mp4",
-      "prompt": "中景连续镜头：女性边拍脸颊边慢慢转身正对镜头微笑，右手始终拿住白色泵瓶，最后低头拧泵头，顶灯过曝光斑在画面上方",
-      "dialogue": "Not bad.",
-      "image_url": ""
+      "prompt": "中景连续镜头：女性涂完口红后转头正对镜头，展示水润的豆沙色唇妆，露出满意的微笑，轻声说一句“真不错”，手里举着白色管身口红，最后低头把口红盖好收好放回桌面，暖色夜景，顶灯过曝光斑在画面上方",
+      "refs": [
+        "refs/character.jpg",
+        "refs/product.jpg"
+      ],
+      "dialogue": "真不错",
+      "gen_duration": 5
     }
   ],
-  "captions": {"srt": ""},
-  "bgm": {"file": "", "gain_db": -16},
-  "notes": "复刻自《居家素颜开箱测评》：5镜结构 拆箱→产品特写→泵取→上脸拍开→转身推荐；台词只在E镜。480p 15s ≈ 645积分 ≈ 6.45元"
+  "captions": {
+    "srt": ""
+  },
+  "bgm": {
+    "file": "",
+    "gain_db": -16
+  },
+  "notes": "定义2验证跑：同结构换内容。结构/节奏/动作时序保留自原片(GLM直传理解),主角换为生成的中国20岁女性,产品从精华泵瓶换为豆沙红口红。生成22s(4+4+4+5+5)×20积分≈440积分,Pippit余额566"
 }
