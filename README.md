@@ -41,6 +41,8 @@ https://apiz.ai/#/   gpt image 2.5和音频处理等等api
 
 https://xyq.jianying.com/cli   seedance 2.5 比较便宜的渠道
 
+https://bigmodel.cn/  GLM智谱 - 理解视频分析视频 （如果你有其他多模态api，也可以告知ai替换）
+
 （当然，你有其他渠道也是可以的，你直接告诉agent ai就可以了，它会自动帮你切换）
 
 ---
