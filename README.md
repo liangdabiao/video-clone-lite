@@ -31,6 +31,18 @@
 费用参考（实测）：一条 **15 秒**的成品视频，大约 **4-6 元人民币**。
 先给你看 3 秒小样确认效果，满意再做完整版，不满意不花钱。
 
+https://www.bilibili.com/video/BV1a4hq6MEbK/?vd_source=86926e418c83af75f6850b5546388a79
+
+## 使用方法：
+
+在你的 codex/workbuddy等安装本skill, 因为需要很好的效果，我优先推荐 gpt image 2.5 和 seedance 2.5 ， 对应的服务我推荐以下： 
+
+https://apiz.ai/#/   gpt image 2.5和音频处理等等api
+
+https://xyq.jianying.com/cli   seedance 2.5 比较便宜的渠道
+
+（当然，你有其他渠道也是可以的，你直接告诉agent ai就可以了，它会自动帮你切换）
+
 ---
 
 ## 整个过程是怎样的（你只需要做三件事）
