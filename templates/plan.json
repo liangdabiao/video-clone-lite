@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "示例：居家素颜开箱测评（15s 竖屏）",
+    "width": 720,
+    "height": 1280,
+    "aspect_ratio": "9:16",
+    "resolution": "480p",
+    "model": "bytedance/seedance-2.0/fast/image-to-video",
+    "native_dialogue": true,
+    "options": {}
+  },
+  "character": {
+    "note": "可选：角色定妆图。image 为空且 image_prompt 有值时，可先用图像模型出图再把 URL 填进各镜头 image_url",
+    "image": "",
+    "image_prompt": "20多岁女性，深棕及肩发用鲨鱼夹挽起，浅灰翻领睡衣，素颜，深夜卧室书桌，暖色台灯夜景，手机直拍质感"
+  },
+  "shots": [
+    {
+      "id": "A",
+      "duration": 2,
+      "file": "shots/A.mp4",
+      "prompt": "竖屏手机直拍质感，深夜卧室书桌前，穿浅灰睡衣的年轻女性双手撕开小快递盒胶带、掀盖低头看盒内，暖黄台灯与顶灯照明，背景床铺虚化，手持轻微晃动，自然实时动作",
+      "dialogue": "",
+      "image_url": ""
+    },
+    {
+      "id": "B",
+      "duration": 3,
+      "file": "shots/B.mp4",
+      "prompt": "特写：从纸盒中取出白色圆肩泵瓶精华，手指转动瓶身展示白色英文标签，背景虚化桌面，暖色夜景，浅景深",
+      "dialogue": "",
+      "image_url": ""
+    },
+    {
+      "id": "C",
+      "duration": 1,
+      "file": "shots/C.mp4",
+      "prompt": "侧面近景：女性低头看手，拇指按下泵头把产品取到另一只手心，动作干脆利落，暖色夜景",
+      "dialogue": "",
+      "image_url": ""
+    },
+    {
+      "id": "D",
+      "duration": 5,
+      "file": "shots/D.mp4",
+      "prompt": "大特写侧脸：指腹把精华在脸颊上轻拍涂匀，皮肤光泽与质地清晰，动作缓慢轻柔，近ASMR氛围，暖色夜景",
+      "dialogue": "",
+      "image_url": ""
+    },
+    {
+      "id": "E",
+      "duration": 4,
+      "file": "shots/E.mp4",
+      "prompt": "中景连续镜头：女性边拍脸颊边慢慢转身正对镜头微笑，右手始终拿住白色泵瓶，最后低头拧泵头，顶灯过曝光斑在画面上方",
+      "dialogue": "Not bad.",
+      "image_url": ""
+    }
+  ],
+  "captions": {"srt": ""},
+  "bgm": {"file": "", "gain_db": -16},
+  "notes": "复刻自《居家素颜开箱测评》：5镜结构 拆箱→产品特写→泵取→上脸拍开→转身推荐；台词只在E镜。480p 15s ≈ 645积分 ≈ 6.45元"
+}
