@@ -111,3 +111,5 @@ AI 生成有一定失败率（平台显示约三分之一概率要重试）。�
 *技术细节（给 AI 看的部分）在本目录 `SKILL.md` 和 `references/` 里；
 两轮实战的完整过程记录在 `D:\hypit-main\测试工作\clone-run1、clone-run2` 的
 `LOG.md` 里。*
+
+特别感谢 https://linux.do 社区支持
